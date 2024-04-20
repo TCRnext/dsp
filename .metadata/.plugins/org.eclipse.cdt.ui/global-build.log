@@ -3158,3 +3158,315 @@ Finished building target: "PWM_test.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project PWM_test ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k clean 
+ 
+DEL /F  "EXP4.hex"  "EXP4.out" 
+DEL /F "DSP2802x_GlobalVariableDefs.obj" "LED_TM1638.obj" "main.obj" "source\DSP2802x_Adc.obj" "source\DSP2802x_CodeStartBranch.obj" "source\DSP2802x_Comp.obj" "source\DSP2802x_CpuTimers.obj" "source\DSP2802x_DBGIER.obj" "source\DSP2802x_DefaultIsr.obj" "source\DSP2802x_DisInt.obj" "source\DSP2802x_ECap.obj" "source\DSP2802x_EPwm.obj" "source\DSP2802x_Gpio.obj" "source\DSP2802x_I2C.obj" "source\DSP2802x_MemCopy.obj" "source\DSP2802x_OscComp.obj" "source\DSP2802x_PieCtrl.obj" "source\DSP2802x_PieVect.obj" "source\DSP2802x_Sci.obj" "source\DSP2802x_Spi.obj" "source\DSP2802x_SysCtrl.obj" "source\DSP2802x_TempSensorConv.obj" "source\DSP2802x_usDelay.obj" 
+DEL /F "DSP2802x_GlobalVariableDefs.d" "LED_TM1638.d" "main.d" "source\DSP2802x_Adc.d" "source\DSP2802x_Comp.d" "source\DSP2802x_CpuTimers.d" "source\DSP2802x_DefaultIsr.d" "source\DSP2802x_ECap.d" "source\DSP2802x_EPwm.d" "source\DSP2802x_Gpio.d" "source\DSP2802x_I2C.d" "source\DSP2802x_MemCopy.d" "source\DSP2802x_OscComp.d" "source\DSP2802x_PieCtrl.d" "source\DSP2802x_PieVect.d" "source\DSP2802x_Sci.d" "source\DSP2802x_Spi.d" "source\DSP2802x_SysCtrl.d" "source\DSP2802x_TempSensorConv.d" 
+DEL /F "source\DSP2802x_CodeStartBranch.d" "source\DSP2802x_DBGIER.d" "source\DSP2802x_DisInt.d" "source\DSP2802x_usDelay.d" 
+找不到 C:\dsp\EXP4\Debug\EXP4.hex
+找不到 C:\dsp\EXP4\Debug\source\DSP2802x_CodeStartBranch.d
+Finished clean
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../DSP2802x_GlobalVariableDefs.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="DSP2802x_GlobalVariableDefs.d_raw"  "../DSP2802x_GlobalVariableDefs.c"
+Finished building: "../DSP2802x_GlobalVariableDefs.c"
+ 
+Building file: "../LED_TM1638.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="LED_TM1638.d_raw"  "../LED_TM1638.c"
+Finished building: "../LED_TM1638.c"
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'main.obj' failed
+"../main.c", line 186: error #249: function "main" has already been defined
+"../main.c", line 188: warning #179-D: variable "j" was declared but never referenced
+"../main.c", line 255: warning #225-D: function "LedShow" declared implicitly
+"../main.c", line 263: warning #161-D: declaration is incompatible with previous "LedShow" (declared at line 255)
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+Building file: "../source/DSP2802x_Adc.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Adc.d_raw" --obj_directory="source"  "../source/DSP2802x_Adc.c"
+Finished building: "../source/DSP2802x_Adc.c"
+ 
+Building file: "../source/DSP2802x_CodeStartBranch.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_CodeStartBranch.d_raw" --obj_directory="source"  "../source/DSP2802x_CodeStartBranch.asm"
+Finished building: "../source/DSP2802x_CodeStartBranch.asm"
+ 
+Building file: "../source/DSP2802x_Comp.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Comp.d_raw" --obj_directory="source"  "../source/DSP2802x_Comp.c"
+Finished building: "../source/DSP2802x_Comp.c"
+ 
+Building file: "../source/DSP2802x_CpuTimers.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_CpuTimers.d_raw" --obj_directory="source"  "../source/DSP2802x_CpuTimers.c"
+Finished building: "../source/DSP2802x_CpuTimers.c"
+ 
+Building file: "../source/DSP2802x_DBGIER.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_DBGIER.d_raw" --obj_directory="source"  "../source/DSP2802x_DBGIER.asm"
+Finished building: "../source/DSP2802x_DBGIER.asm"
+ 
+Building file: "../source/DSP2802x_DefaultIsr.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_DefaultIsr.d_raw" --obj_directory="source"  "../source/DSP2802x_DefaultIsr.c"
+Finished building: "../source/DSP2802x_DefaultIsr.c"
+ 
+Building file: "../source/DSP2802x_DisInt.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_DisInt.d_raw" --obj_directory="source"  "../source/DSP2802x_DisInt.asm"
+Finished building: "../source/DSP2802x_DisInt.asm"
+ 
+Building file: "../source/DSP2802x_ECap.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_ECap.d_raw" --obj_directory="source"  "../source/DSP2802x_ECap.c"
+Finished building: "../source/DSP2802x_ECap.c"
+ 
+Building file: "../source/DSP2802x_EPwm.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_EPwm.d_raw" --obj_directory="source"  "../source/DSP2802x_EPwm.c"
+Finished building: "../source/DSP2802x_EPwm.c"
+ 
+Building file: "../source/DSP2802x_Gpio.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Gpio.d_raw" --obj_directory="source"  "../source/DSP2802x_Gpio.c"
+Finished building: "../source/DSP2802x_Gpio.c"
+ 
+Building file: "../source/DSP2802x_I2C.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_I2C.d_raw" --obj_directory="source"  "../source/DSP2802x_I2C.c"
+Finished building: "../source/DSP2802x_I2C.c"
+ 
+Building file: "../source/DSP2802x_MemCopy.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_MemCopy.d_raw" --obj_directory="source"  "../source/DSP2802x_MemCopy.c"
+Finished building: "../source/DSP2802x_MemCopy.c"
+ 
+Building file: "../source/DSP2802x_OscComp.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_OscComp.d_raw" --obj_directory="source"  "../source/DSP2802x_OscComp.c"
+Finished building: "../source/DSP2802x_OscComp.c"
+ 
+Building file: "../source/DSP2802x_PieCtrl.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_PieCtrl.d_raw" --obj_directory="source"  "../source/DSP2802x_PieCtrl.c"
+Finished building: "../source/DSP2802x_PieCtrl.c"
+ 
+Building file: "../source/DSP2802x_PieVect.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_PieVect.d_raw" --obj_directory="source"  "../source/DSP2802x_PieVect.c"
+Finished building: "../source/DSP2802x_PieVect.c"
+ 
+Building file: "../source/DSP2802x_Sci.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Sci.d_raw" --obj_directory="source"  "../source/DSP2802x_Sci.c"
+Finished building: "../source/DSP2802x_Sci.c"
+ 
+Building file: "../source/DSP2802x_Spi.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Spi.d_raw" --obj_directory="source"  "../source/DSP2802x_Spi.c"
+Finished building: "../source/DSP2802x_Spi.c"
+ 
+Building file: "../source/DSP2802x_SysCtrl.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_SysCtrl.d_raw" --obj_directory="source"  "../source/DSP2802x_SysCtrl.c"
+Finished building: "../source/DSP2802x_SysCtrl.c"
+ 
+Building file: "../source/DSP2802x_TempSensorConv.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_TempSensorConv.d_raw" --obj_directory="source"  "../source/DSP2802x_TempSensorConv.c"
+Finished building: "../source/DSP2802x_TempSensorConv.c"
+ 
+Building file: "../source/DSP2802x_usDelay.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_usDelay.d_raw" --obj_directory="source"  "../source/DSP2802x_usDelay.asm"
+Finished building: "../source/DSP2802x_usDelay.asm"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'main.obj' failed
+"../main.c", line 186: error #249: function "main" has already been defined
+"../main.c", line 188: warning #179-D: variable "j" was declared but never referenced
+"../main.c", line 255: warning #225-D: function "LedShow" declared implicitly
+"../main.c", line 263: warning #161-D: declaration is incompatible with previous "LedShow" (declared at line 255)
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'main.obj' failed
+"../main.c", line 186: error #249: function "main" has already been defined
+"../main.c", line 188: warning #179-D: variable "j" was declared but never referenced
+"../main.c", line 255: warning #225-D: function "LedShow" declared implicitly
+"../main.c", line 263: warning #161-D: declaration is incompatible with previous "LedShow" (declared at line 255)
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 180: warning #179-D: variable "j" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "EXP4.out"
+Invoking: C2000 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"EXP4.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="EXP4_linkInfo.xml" --rom_model -o "EXP4.out" "./DSP2802x_GlobalVariableDefs.obj" "./LED_TM1638.obj" "./main.obj" "./source/DSP2802x_Adc.obj" "./source/DSP2802x_CodeStartBranch.obj" "./source/DSP2802x_Comp.obj" "./source/DSP2802x_CpuTimers.obj" "./source/DSP2802x_DBGIER.obj" "./source/DSP2802x_DefaultIsr.obj" "./source/DSP2802x_DisInt.obj" "./source/DSP2802x_ECap.obj" "./source/DSP2802x_EPwm.obj" "./source/DSP2802x_Gpio.obj" "./source/DSP2802x_I2C.obj" "./source/DSP2802x_MemCopy.obj" "./source/DSP2802x_OscComp.obj" "./source/DSP2802x_PieCtrl.obj" "./source/DSP2802x_PieVect.obj" "./source/DSP2802x_Sci.obj" "./source/DSP2802x_Spi.obj" "./source/DSP2802x_SysCtrl.obj" "./source/DSP2802x_TempSensorConv.obj" "./source/DSP2802x_usDelay.obj" "../F28027.cmd" "../F2802x_Headers_nonBIOS.cmd"  -llibc.a 
+<Linking>
+Finished building target: "EXP4.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 191: warning #179-D: variable "j" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "EXP4.out"
+Invoking: C2000 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"EXP4.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="EXP4_linkInfo.xml" --rom_model -o "EXP4.out" "./DSP2802x_GlobalVariableDefs.obj" "./LED_TM1638.obj" "./main.obj" "./source/DSP2802x_Adc.obj" "./source/DSP2802x_CodeStartBranch.obj" "./source/DSP2802x_Comp.obj" "./source/DSP2802x_CpuTimers.obj" "./source/DSP2802x_DBGIER.obj" "./source/DSP2802x_DefaultIsr.obj" "./source/DSP2802x_DisInt.obj" "./source/DSP2802x_ECap.obj" "./source/DSP2802x_EPwm.obj" "./source/DSP2802x_Gpio.obj" "./source/DSP2802x_I2C.obj" "./source/DSP2802x_MemCopy.obj" "./source/DSP2802x_OscComp.obj" "./source/DSP2802x_PieCtrl.obj" "./source/DSP2802x_PieVect.obj" "./source/DSP2802x_Sci.obj" "./source/DSP2802x_Spi.obj" "./source/DSP2802x_SysCtrl.obj" "./source/DSP2802x_TempSensorConv.obj" "./source/DSP2802x_usDelay.obj" "../F28027.cmd" "../F2802x_Headers_nonBIOS.cmd"  -llibc.a 
+<Linking>
+Finished building target: "EXP4.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 191: warning #179-D: variable "j" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "EXP4.out"
+Invoking: C2000 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"EXP4.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="EXP4_linkInfo.xml" --rom_model -o "EXP4.out" "./DSP2802x_GlobalVariableDefs.obj" "./LED_TM1638.obj" "./main.obj" "./source/DSP2802x_Adc.obj" "./source/DSP2802x_CodeStartBranch.obj" "./source/DSP2802x_Comp.obj" "./source/DSP2802x_CpuTimers.obj" "./source/DSP2802x_DBGIER.obj" "./source/DSP2802x_DefaultIsr.obj" "./source/DSP2802x_DisInt.obj" "./source/DSP2802x_ECap.obj" "./source/DSP2802x_EPwm.obj" "./source/DSP2802x_Gpio.obj" "./source/DSP2802x_I2C.obj" "./source/DSP2802x_MemCopy.obj" "./source/DSP2802x_OscComp.obj" "./source/DSP2802x_PieCtrl.obj" "./source/DSP2802x_PieVect.obj" "./source/DSP2802x_Sci.obj" "./source/DSP2802x_Spi.obj" "./source/DSP2802x_SysCtrl.obj" "./source/DSP2802x_TempSensorConv.obj" "./source/DSP2802x_usDelay.obj" "../F28027.cmd" "../F2802x_Headers_nonBIOS.cmd"  -llibc.a 
+<Linking>
+Finished building target: "EXP4.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 191: warning #179-D: variable "j" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "EXP4.out"
+Invoking: C2000 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"EXP4.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="EXP4_linkInfo.xml" --rom_model -o "EXP4.out" "./DSP2802x_GlobalVariableDefs.obj" "./LED_TM1638.obj" "./main.obj" "./source/DSP2802x_Adc.obj" "./source/DSP2802x_CodeStartBranch.obj" "./source/DSP2802x_Comp.obj" "./source/DSP2802x_CpuTimers.obj" "./source/DSP2802x_DBGIER.obj" "./source/DSP2802x_DefaultIsr.obj" "./source/DSP2802x_DisInt.obj" "./source/DSP2802x_ECap.obj" "./source/DSP2802x_EPwm.obj" "./source/DSP2802x_Gpio.obj" "./source/DSP2802x_I2C.obj" "./source/DSP2802x_MemCopy.obj" "./source/DSP2802x_OscComp.obj" "./source/DSP2802x_PieCtrl.obj" "./source/DSP2802x_PieVect.obj" "./source/DSP2802x_Sci.obj" "./source/DSP2802x_Spi.obj" "./source/DSP2802x_SysCtrl.obj" "./source/DSP2802x_TempSensorConv.obj" "./source/DSP2802x_usDelay.obj" "../F28027.cmd" "../F2802x_Headers_nonBIOS.cmd"  -llibc.a 
+<Linking>
+Finished building target: "EXP4.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project EXP4 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k all 
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 191: warning #179-D: variable "j" was declared but never referenced
+Finished building: "../main.c"
+ 
+Building target: "EXP4.out"
+Invoking: C2000 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -Ooff --advice:performance=all -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"EXP4.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="EXP4_linkInfo.xml" --rom_model -o "EXP4.out" "./DSP2802x_GlobalVariableDefs.obj" "./LED_TM1638.obj" "./main.obj" "./source/DSP2802x_Adc.obj" "./source/DSP2802x_CodeStartBranch.obj" "./source/DSP2802x_Comp.obj" "./source/DSP2802x_CpuTimers.obj" "./source/DSP2802x_DBGIER.obj" "./source/DSP2802x_DefaultIsr.obj" "./source/DSP2802x_DisInt.obj" "./source/DSP2802x_ECap.obj" "./source/DSP2802x_EPwm.obj" "./source/DSP2802x_Gpio.obj" "./source/DSP2802x_I2C.obj" "./source/DSP2802x_MemCopy.obj" "./source/DSP2802x_OscComp.obj" "./source/DSP2802x_PieCtrl.obj" "./source/DSP2802x_PieVect.obj" "./source/DSP2802x_Sci.obj" "./source/DSP2802x_Spi.obj" "./source/DSP2802x_SysCtrl.obj" "./source/DSP2802x_TempSensorConv.obj" "./source/DSP2802x_usDelay.obj" "../F28027.cmd" "../F2802x_Headers_nonBIOS.cmd"  -llibc.a 
+<Linking>
+Finished building target: "EXP4.out"
+ 
+
+**** Build Finished ****
