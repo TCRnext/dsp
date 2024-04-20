@@ -1,0 +1,181 @@
+/*
+ * main.c
+ */
+#include "DSP28x_Project.h"
+#include "LED_TM1638.h"
+
+
+interrupt void myXint1_isr(void);     //xint1
+interrupt void EPWM4Int_isr(void);    //EPWM4
+// interrupt void Ecap1Int_isr(void);    //ECAP1
+// interrupt void MyAdcInt1_isr(void);   //ADCINT1
+void init_epwm4(int PWMFrequency, int duty ,int deadtime_per);
+
+void init_epwm4(int PWMFrequency, int duty ,int deadtime_per)//频率(Khz)，占空比1-99，死区占比0-25%
+{
+  
+  int PWMPRD = 60000/PWMFrequency/2;
+  int deadtime = 0;
+  if (deadtime_per >25)
+  {
+    deadtime = PWMPRD *25 /100;
+  }
+  else if (deadtime <=0)
+  {
+    deadtime = 0;
+  }
+  else
+  {
+    deadtime = PWMPRD *deadtime_per/100;
+  }
+  EALLOW;
+  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC =0;
+  EDIS;
+
+  EPwm4Regs.TBPRD = PWMPRD;
+  EPwm4Regs.TBPHS.half.TBPHS = 0;
+  EPwm4Regs.TBCTL.bit.CLKDIV = 0;
+  EPwm4Regs.TBCTL.bit.HSPCLKDIV = 0;
+  EPwm4Regs.TBCTL.bit.CTRMODE = 2;
+  EPwm4Regs.TBCTL.bit.PHSEN = 0;
+  EPwm4Regs.TBCTL.bit.PRDLD = 0;
+  EPwm4Regs.TBCTL.bit.SYNCOSEL = TB_CTR_ZERO;
+  EPwm4Regs.CMPCTL.bit.SHDWAMODE =0;
+  EPwm4Regs.CMPCTL.bit.SHDWBMODE =0;
+  EPwm4Regs.CMPCTL.bit.LOADAMODE =2;
+  EPwm4Regs.CMPCTL.bit.LOADBMODE =2;
+  EPwm4Regs.AQCTLA.bit.CAU = 1;
+  EPwm4Regs.AQCTLA.bit.CAD = 2;
+  EPwm4Regs.AQCTLB.bit.CBU = 0;
+  EPwm4Regs.AQCTLB.bit.CBD = 0;
+  EPwm4Regs.DBCTL.bit.OUT_MODE = 3;
+  EPwm4Regs.DBCTL.bit.POLSEL = 2;
+  EPwm4Regs.DBFED = deadtime;
+  EPwm4Regs.DBRED = deadtime;
+  EPwm4Regs.CMPA.half.CMPA = PWMPRD * duty /100;
+  EPwm4Regs.CMPB = PWMPRD * duty /100;
+  //EPwm4Regs.ETSEL.bit.INTEN = 0;
+  //EPwm4Regs.ETSEL.bit.INTSEL = 0;
+  //EPwm4Regs.ETPS.bit.INTPRD = 0;
+  EPwm4Regs.ETCLR.bit.INT = 1;
+
+  EALLOW;
+  SysCtrlRegs.PCLKCR0.bit.TBCLKSYNC =1;
+  EDIS; 
+}
+
+void DelaymS(int tm)
+{
+  int i;
+  unsigned int j;
+    for(i = 0;i < tm ;i++){
+      j =  60000;
+      while(j != 0)j--;
+      }
+}
+void main(void)
+{
+    int j ;
+      InitSysCtrl();  	//初始化系统时钟，选择内部晶振1，10MHZ，12倍频，2分频，初始化外设时钟，低速外设,4分频
+	  DINT; 				//关总中断
+	  IER = 0x0000;  	 	//关CPU中断使能
+	  IFR = 0x0000;   	//清CPU中断标志
+	  InitPieCtrl();  	//关pie中断
+	  InitPieVectTable();	//清中断向量表
+
+	  EALLOW;				/**配置中断向量表*****/
+	  //PieVectTable.TINT0 = &cpu_timer0_isr;
+	  PieVectTable.XINT1 = &myXint1_isr;
+    //PieVectTable.TINT1 = &cpu_timer1_isr;
+	  // PieVectTable.ECAP1_INT = &Ecap1Int_isr;
+	  // PieVectTable.EPWM4_INT = &EPWM4Int_isr;
+	  // PieVectTable.ADCINT1 = &MyAdcInt1_isr;
+	  EDIS;
+    
+
+	 //  MemCopy(&RamfuncsLoadStart, &RamfuncsLoadEnd, &RamfuncsRunStart);
+	  InitFlash();
+
+	  InitCpuTimers();   	// 初始化定时器
+    EALLOW;		
+    ConfigCpuTimer(&CpuTimer0,60,10000);
+    CpuTimer0Regs.TCR.bit.TSS = 0;
+    CpuTimer0Regs.TCR.bit.TRB = 1;
+    CpuTimer0.InterruptCount = 0;
+    EDIS;
+
+    Xint1_Init();
+	  TM1638_Init(); 		//初始化LED
+    init_epwm4(10,50,10);
+	  EINT;
+	  ERTM;
+
+
+	while(1){
+
+
+	  }
+}
+
+void HorseRunning(int no,int sum_input)
+{
+  switch (sum_input %3)
+  {
+  case 1:
+    HorseRunning_1(no);
+    break;
+  case 2:
+    HorseRunning_2(no);
+    break;
+  default:
+    HorseRunning_3(no);
+    break;
+  }
+}
+
+void HorseRunning_1(int no)
+{
+    if(no & 0x1)Led0Blink();
+    else Led0Blank();
+    if(no & 0x2)Led1Blink();
+    else Led1Blank();
+    if(no & 0x4)Led2Blink();
+    else Led2Blank();
+    if(no & 0x8)Led3Blink();
+    else Led3Blank();
+}
+void HorseRunning_2(int no)
+{
+    if((no%4)==0)Led0Blink();
+    else Led0Blank();
+    if((no%4)==1)Led1Blink();
+    else Led1Blank();
+    if((no%4)==2)Led2Blink();
+    else Led2Blank();
+    if((no%4)==3)Led3Blink();
+    else Led3Blank();
+}
+
+void HorseRunning_3(int no)
+{
+    if((no%4)==3)Led0Blink();
+    else Led0Blank();
+    if((no%4)==2)Led1Blink();
+    else Led1Blank();
+    if((no%4)==1)Led2Blink();
+    else Led2Blank();
+    if((no%4)==0)Led3Blink();
+    else Led3Blank();
+}
+interrupt void myXint1_isr(void)
+{
+   
+   PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;
+   
+}
+
+
+interrupt void EPWM4Int_isr(void)
+{
+
+}

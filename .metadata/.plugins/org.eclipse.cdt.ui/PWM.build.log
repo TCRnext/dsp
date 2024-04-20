@@ -1,0 +1,126 @@
+
+**** Build of configuration Debug for project PWM ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../source/DSP2802x_CSMPasswords.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_CSMPasswords.d_raw" --obj_directory="source"  "../source/DSP2802x_CSMPasswords.asm"
+Finished building: "../source/DSP2802x_CSMPasswords.asm"
+ 
+Building file: "../source/DSP2802x_CodeStartBranch.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_CodeStartBranch.d_raw" --obj_directory="source"  "../source/DSP2802x_CodeStartBranch.asm"
+Finished building: "../source/DSP2802x_CodeStartBranch.asm"
+ 
+Building file: "../main.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
+ 
+Building file: "../source/DSP2802x_DBGIER.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_DBGIER.d_raw" --obj_directory="source"  "../source/DSP2802x_DBGIER.asm"
+Finished building: "../source/DSP2802x_DBGIER.asm"
+ 
+Building file: "../source/DSP2802x_Comp.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Comp.d_raw" --obj_directory="source"  "../source/DSP2802x_Comp.c"
+Finished building: "../source/DSP2802x_Comp.c"
+ 
+Building file: "../source/DSP2802x_DisInt.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_DisInt.d_raw" --obj_directory="source"  "../source/DSP2802x_DisInt.asm"
+Finished building: "../source/DSP2802x_DisInt.asm"
+ 
+Building file: "../source/DSP2802x_CpuTimers.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_CpuTimers.d_raw" --obj_directory="source"  "../source/DSP2802x_CpuTimers.c"
+Finished building: "../source/DSP2802x_CpuTimers.c"
+ 
+Building file: "../source/DSP2802x_DefaultIsr.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_DefaultIsr.d_raw" --obj_directory="source"  "../source/DSP2802x_DefaultIsr.c"
+Finished building: "../source/DSP2802x_DefaultIsr.c"
+ 
+Building file: "../source/DSP2802x_Adc.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Adc.d_raw" --obj_directory="source"  "../source/DSP2802x_Adc.c"
+Finished building: "../source/DSP2802x_Adc.c"
+ 
+Building file: "../source/DSP2802x_ECap.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_ECap.d_raw" --obj_directory="source"  "../source/DSP2802x_ECap.c"
+Finished building: "../source/DSP2802x_ECap.c"
+ 
+Building file: "../source/DSP2802x_EPwm.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_EPwm.d_raw" --obj_directory="source"  "../source/DSP2802x_EPwm.c"
+Finished building: "../source/DSP2802x_EPwm.c"
+ 
+Building file: "../source/DSP2802x_Gpio.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Gpio.d_raw" --obj_directory="source"  "../source/DSP2802x_Gpio.c"
+Finished building: "../source/DSP2802x_Gpio.c"
+ 
+Building file: "../source/DSP2802x_I2C.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_I2C.d_raw" --obj_directory="source"  "../source/DSP2802x_I2C.c"
+Finished building: "../source/DSP2802x_I2C.c"
+ 
+Building file: "../source/DSP2802x_MemCopy.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_MemCopy.d_raw" --obj_directory="source"  "../source/DSP2802x_MemCopy.c"
+Finished building: "../source/DSP2802x_MemCopy.c"
+ 
+Building file: "../source/DSP2802x_PieCtrl.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_PieCtrl.d_raw" --obj_directory="source"  "../source/DSP2802x_PieCtrl.c"
+Finished building: "../source/DSP2802x_PieCtrl.c"
+ 
+Building file: "../source/DSP2802x_OscComp.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_OscComp.d_raw" --obj_directory="source"  "../source/DSP2802x_OscComp.c"
+Finished building: "../source/DSP2802x_OscComp.c"
+ 
+Building file: "../source/DSP2802x_Sci.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Sci.d_raw" --obj_directory="source"  "../source/DSP2802x_Sci.c"
+Finished building: "../source/DSP2802x_Sci.c"
+ 
+Building file: "../source/DSP2802x_PieVect.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_PieVect.d_raw" --obj_directory="source"  "../source/DSP2802x_PieVect.c"
+Finished building: "../source/DSP2802x_PieVect.c"
+ 
+Building file: "../source/DSP2802x_Spi.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_Spi.d_raw" --obj_directory="source"  "../source/DSP2802x_Spi.c"
+Finished building: "../source/DSP2802x_Spi.c"
+ 
+Building file: "../source/DSP2802x_usDelay.asm"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_usDelay.d_raw" --obj_directory="source"  "../source/DSP2802x_usDelay.asm"
+Finished building: "../source/DSP2802x_usDelay.asm"
+ 
+Building file: "../source/DSP2802x_TempSensorConv.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_TempSensorConv.d_raw" --obj_directory="source"  "../source/DSP2802x_TempSensorConv.c"
+Finished building: "../source/DSP2802x_TempSensorConv.c"
+ 
+Building file: "../source/DSP2802x_SysCtrl.c"
+Invoking: C2000 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/dsp/PWM" --include_path="C:/dsp/v125/DSP2802x_headers/include" --include_path="C:/dsp/v125/DSP2802x_common/include" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="source/DSP2802x_SysCtrl.d_raw" --obj_directory="source"  "../source/DSP2802x_SysCtrl.c"
+Finished building: "../source/DSP2802x_SysCtrl.c"
+ 
+Building target: "PWM.out"
+Invoking: C2000 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/bin/cl2000" -v28 -ml -mt -g --diag_warning=225 --diag_wrap=off --display_error_number -z -m"PWM.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-c2000_18.1.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="PWM_linkInfo.xml" --rom_model -o "PWM.out" "./main.obj" "./source/DSP2802x_Adc.obj" "./source/DSP2802x_CSMPasswords.obj" "./source/DSP2802x_CodeStartBranch.obj" "./source/DSP2802x_Comp.obj" "./source/DSP2802x_CpuTimers.obj" "./source/DSP2802x_DBGIER.obj" "./source/DSP2802x_DefaultIsr.obj" "./source/DSP2802x_DisInt.obj" "./source/DSP2802x_ECap.obj" "./source/DSP2802x_EPwm.obj" "./source/DSP2802x_Gpio.obj" "./source/DSP2802x_I2C.obj" "./source/DSP2802x_MemCopy.obj" "./source/DSP2802x_OscComp.obj" "./source/DSP2802x_PieCtrl.obj" "./source/DSP2802x_PieVect.obj" "./source/DSP2802x_Sci.obj" "./source/DSP2802x_Spi.obj" "./source/DSP2802x_SysCtrl.obj" "./source/DSP2802x_TempSensorConv.obj" "./source/DSP2802x_usDelay.obj" "../28027_RAM_lnk.cmd"  -llibc.a 
+<Linking>
+warning #10247-D: creating output section "csmpasswds" without a SECTIONS specification
+warning #10247-D: creating output section "csm_rsvd" without a SECTIONS specification
+warning #10247-D: creating output section "ramfuncs" without a SECTIONS specification
+Finished building target: "PWM.out"
+ 
+
+**** Build Finished ****

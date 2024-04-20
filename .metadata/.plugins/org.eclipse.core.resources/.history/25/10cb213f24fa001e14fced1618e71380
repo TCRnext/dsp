@@ -1,0 +1,130 @@
+/*
+ * main.c
+ */
+#include "DSP28x_Project.h"
+#include "LED_TM1638.h"
+
+// interrupt void cpu_timer0_isr(void);  //timer0
+// interrupt void myXint1_isr(void);     //xint1
+// interrupt void EPWM4Int_isr(void);    //EPWM4
+// interrupt void Ecap1Int_isr(void);    //ECAP1
+// interrupt void MyAdcInt1_isr(void);   //ADCINT1
+
+void HorseRunning(int16 no);
+
+#define Led0Blink() GpioDataRegs.GPACLEAR.bit.GPIO0 = 1
+#define Led1Blink() GpioDataRegs.GPACLEAR.bit.GPIO1 = 1
+#define Led2Blink() GpioDataRegs.GPACLEAR.bit.GPIO2 = 1
+#define Led3Blink() GpioDataRegs.GPACLEAR.bit.GPIO3 = 1
+#define Led0Blank() GpioDataRegs.GPASET.bit.GPIO0 = 1
+#define Led1Blank() GpioDataRegs.GPASET.bit.GPIO1 = 1
+#define Led2Blank() GpioDataRegs.GPASET.bit.GPIO2 = 1
+#define Led3Blank() GpioDataRegs.GPASET.bit.GPIO3 = 1
+
+
+void  Xint1_Init()
+{
+    EALLOW;
+
+    EDIS;
+}
+
+void HorseIO_Init()
+{
+	  EALLOW;
+    GpioDataRegs.GPASET.bit.GPIO0 = 1;
+    GpioDataRegs.GPASET.bit.GPIO1 = 1;
+    GpioDataRegs.GPASET.bit.GPIO2 = 1;
+    GpioDataRegs.GPASET.bit.GPIO3 = 1;
+    GpioCtrlRegs.GPAMUX1.bit.GPIO0 = 0;
+    GpioCtrlRegs.GPADIR.bit.GPIO0 = 1;
+    GpioCtrlRegs.GPAMUX1.bit.GPIO1 = 0;
+    GpioCtrlRegs.GPADIR.bit.GPIO1 = 1;
+    GpioCtrlRegs.GPAMUX1.bit.GPIO2 = 0;
+    GpioCtrlRegs.GPADIR.bit.GPIO2 = 1;
+    GpioCtrlRegs.GPAMUX1.bit.GPIO3 = 0;
+    GpioCtrlRegs.GPADIR.bit.GPIO3 = 1;
+    EDIS;
+	
+}
+
+void DelaymS(int tm)
+{
+  int i;
+  unsigned int j;
+    for(i = 0;i < tm ;i++){
+      j =  60000;
+      while(j != 0)j--;
+      }
+}
+void main(void)
+{
+    int j;
+      InitSysCtrl();  	//初始化系统时钟，选择内部晶振1，10MHZ，12倍频，2分频，初始化外设时钟，低速外设,4分频
+	  DINT; 				//关总中断
+	  IER = 0x0000;  	 	//关CPU中断使能
+	  IFR = 0x0000;   	//清CPU中断标志
+	  InitPieCtrl();  	//关pie中断
+	  InitPieVectTable();	//清中断向量表
+
+	  EALLOW;				/**配置中断向量表*****/
+	  // PieVectTable.TINT0 = &cpu_timer0_isr;
+	  // PieVectTable.XINT1 = &myXint1_isr;
+	  // PieVectTable.ECAP1_INT = &Ecap1Int_isr;
+	  // PieVectTable.EPWM4_INT = &EPWM4Int_isr;
+	  // PieVectTable.ADCINT1 = &MyAdcInt1_isr;
+	  EDIS;
+
+	 //  MemCopy(&RamfuncsLoadStart, &RamfuncsLoadEnd, &RamfuncsRunStart);
+	  InitFlash();
+
+	  InitCpuTimers();   	// 初始化定时器
+
+      HorseIO_Init();
+      Xint1_Init();
+	  TM1638_Init(); 		//初始化LED
+
+
+
+	  EINT;
+	  ERTM;
+
+
+	while(1){
+
+	  DelaymS(200);
+	  j++;
+	  j = j & 0xf;
+	  HorseRunning(j);
+      LED_Show(1, 1, 0);
+      LED_Show(2, 2, 0);
+      LED_Show(3, 3, 0);
+      LED_Show(4, 4, 0);
+      LED_Show(5, 5, 0);
+      LED_Show(6, 6, 0);
+	  }
+}
+
+void HorseRunning(int no)
+{
+    if(no & 0x1)Led0Blink();
+    else Led0Blank();
+    if(no & 0x2)Led1Blink();
+    else Led1Blank();
+    if(no & 0x4)Led2Blink();
+    else Led2Blank();
+    if(no & 0x8)Led3Blink();
+    else Led3Blank();
+}
+
+
+interrupt void myXint1_isr(void)
+{
+   PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;
+}
+
+interrupt void cpu_timer0_isr(void) {
+
+  	PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;
+}
+

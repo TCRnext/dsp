@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.inf": "edk2_inf",
+        "dsp28x_project.h": "c"
+    }
+}
